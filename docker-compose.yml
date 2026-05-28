@@ -1,0 +1,11 @@
+
+services:
+  app:
+    build: .
+    container_name: inventory-java
+    working_dir: /app
+    ports:
+      - "8081:8080"
+    volumes:
+      - .:/app
+    command: ./gradlew bootRun
